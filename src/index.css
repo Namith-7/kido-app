@@ -1,0 +1,73 @@
+:root {
+  /* Soft Pastel Palette */
+  --color-bg-cream: #FFF8E7; /* Light cream */
+  --color-bg-peach: #FFE5D9; /* Soft peach for gradients */
+  --color-action-red: #FFB3BA; /* Pastel Red */
+  --color-action-red-dark: #FF8A94;
+  --color-nav-blue: #BAE1FF; /* Pastel Blue */
+  --color-nav-blue-dark: #8AC6FF;
+  --color-reward-yellow: #FFFFBA; /* Pastel Yellow */
+  --color-reward-yellow-dark: #FFDF80;
+  --color-forest-green: #Baffc9; /* Pastel Green */
+  --color-text-dark: #5D5D5D; /* Soft dark grey for text */
+  --color-text-light: #8E8E8E;
+  
+  --font-family-base: 'Roboto', sans-serif; /* Placeholder, will import Google Font */
+  --radius-bubble: 25px; /* Fully rounded corners */
+  --radius-card: 20px;
+  
+  --shadow-soft: 0 4px 15px rgba(0,0,0,0.05);
+  --shadow-pop: 0 8px 0 rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none; /* Prevent selection for app-like feel */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
+  background: linear-gradient(180deg, var(--color-bg-cream) 0%, var(--color-bg-peach) 100%);
+  color: var(--color-text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Typography */
+h1, h2, h3, p {
+  margin: 0;
+}
+
+/* Animations */
+@keyframes nice-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+}
+
+.tap-active:active {
+  animation: nice-bounce 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Utility */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
